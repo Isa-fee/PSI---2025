@@ -2,23 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
-    <h1>Censo IBGE</h1>
-    <form action="#" method="POST">
-        <input type="text" placeholder="Nome" name="nome">
-        <button>Enviar</button>
-    </form>
+<style>
+    table{
+        border: 1px dashed rgb(32, 13, 145);
+        background-color: rgb(247, 247, 247);
+        width: 700px; 
+        border-collapse: collapse;
 
-    <!-- lista -->
-    {% for usuario in lista %}
-    <p> {{ usuario.nome }} | {{ usuario['nome']}} | {{ usuario[1] }}</p>
-    {% endfor %}
-    
+    }
+    thead{
+        background-color: rgb(218, 215, 215);
+    }
+    th {
+           border: 1px solid black;
+           text-align: center;
+
+           
+
+
+
+        }
+    td {
+           border: 1px solid black;
+           text-align: center;
+
+
+
+
+        }
+</style>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Mês</th>
+
+                <th colspan="4" > Vendas </th> <!--COLSPLAN - Para dizer quantos espaços a coluna tem quem ocupar-->
+                
+            </tr>
+            <tr> <!-- linhas-->
+                <th> <!-- colunas,no cabeçalho-->
+                    Produto A
+                </th>
+                <th>
+                    Produto B
+                </th>
+                <th>
+                    Produto C
+                </th>
+                <th> Total de Vendas </th>
+
+            </tr>
+
+        </thead>
+        
+
+        <tbody>
+            <tr> <!-- Outra Linha-->
+                <td> Janeiro</td>
+                <td> <!-- Colunas, no corpo da tabela-->
+                    250
+                </td>
+                <td>300</td>
+
+                <td>
+                    150
+                </td>
+                <td>700</td>
+            </tr>
+            <!--ADCIONAR OUTRA LINHA-->
+            <tr>
+                <td>Fevereiro</td>
+                <td>400</td>
+                <td>500</td>
+                <td>300</td>
+                <td>1200</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Total</td>
+                <td style="font-weight: bold;">650</td>
+                <td style="font-weight: bold;">800</td>
+                <td style="font-weight: bold;">450</td>
+                <td style="font-weight: bold;">1800</td>
+            </tr>
+        </tbody>
+
+    </table>
 
 </body>
 </html>
